@@ -61,6 +61,7 @@ header{
 }
 .div-content h2{
     color: white;
+    font-family: 'Open sans', sans-serif;
 }
 .div-content h2 p{
     border-right: 2px solid white;
