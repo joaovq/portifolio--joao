@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background: yellow;
+}
+section{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+:root{
+    --bg-color:#F5F5F5;
+    --text-color:#1C1C1C;
+    --main-color:#FF6347;
+    --second-color:#DCDCDC;
+    --big-font:4.5rem;
+    --h2-font:3.2rem;
+    --p-font:1.2rem;
+}
+#header{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.logo-header img{
+    width: 50px;
+}
+.nav-bar-header{
+    display: flex;
+    list-style: none;
+}
+.nav-bar-header li{
+    position: relative;
+}
+.nav-bar-header a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 20px;
+}
+.nav-bar-header a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    bottom: -5px;
+    left: 0;
+    transition: ease .50s;
+}
+.nav-bar-header a:hover::after{
+    width: 100%;
+}
+#nav-bar-icon{
+    font-size: 25px;
+    color: var(--text-color);
+    z-index: 11;
+    cursor: pointer;
+    display: none;
+}
+.btn-header{
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    transition: ease .50s;
+}
+.btn-header:hover{
+    color: var(--bg-color);
+    background: var(--main-color);
+    transform: scale(1.2);
+}
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 5rem;
+}
+.home-text h1{
+    margin: 12px 0 25px 0;
+    font-size: var(--big-font);
+}
+.home-text h5{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.home-text span{
+  color: var(--main-color);
+}
