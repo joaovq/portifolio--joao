@@ -32,7 +32,7 @@ header.sticky{
 :root{
     --bg-color:#f4f4f4;
     --text-color:#1C1C1C;
-    --main-color:#FF6347;
+    --main-color: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     --second-color:#868686;
     --big-font:4.5rem;
     --h2-font:3.2rem;
@@ -46,9 +46,18 @@ header.sticky{
     justify-content: space-between;
     padding: 10px;
 }
-.logo-header img{
+/* .logo-header img{
     width: 50px;
+} */
+
+ion-icon{
+    color:#1C1C1C;
 }
+ion-icon:hover{
+    transition: all .3s;
+    color: rgb(131,58,180,1);
+}
+
 .nav-bar-header{
     display: flex;
     list-style: none;
@@ -107,7 +116,35 @@ header.sticky{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     grid-gap: 5rem;
-    
+}
+.home-image img{
+    animation: scaleImg 4s ease;
+}
+@keyframes scaleImg{
+    from{
+        transition: all 4s;
+        transform: scale(1.08);
+    }
+    to{
+    }
+}
+
+.home-text{
+    animation: textIn 1.5s ease-in ;
+}
+@keyframes textIn{
+    0%{
+        transform: translateX(-60px);
+        opacity: 0%;
+    }
+    50%{ 
+        transform: translateX(-30px);
+        opacity: 50%;
+    }
+    100%{ 
+        transform: translateX(0px);
+        opacity: 100%;
+    }
 }
 .home-text h1{
     margin: 12px 0 25px 0;
@@ -211,6 +248,12 @@ header.sticky{
     line-height: 25px;
     margin-bottom: 20px;
 }
+.about-text .btn{
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .portifolio-head{
     text-align: center;
 }
@@ -226,7 +269,6 @@ header.sticky{
     margin-top: 10px;
     margin-bottom: 30px;
     text-align: center;
-    cursor: pointer;
 }
 .portifolio-content{
 	display: grid;
@@ -352,6 +394,8 @@ footer{
 		transition: .3s;
 	}
 	.home-image img{
+        margin-top: 2rem;
+        margin-left: 6rem;
 		max-width: 450px;
 		transition: .3s;
 	}
